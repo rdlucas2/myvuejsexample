@@ -43,14 +43,30 @@
 
     <script type="text/x-template" id="home-template">
         <div class="pure-g">
-            <div class="pure-u-1">
+            <div class="pure-u-1-2">
                 This is the home page
+            </div>
+            <div class="pure-u-1-2">
+                <weather-vue></weather-vue>
             </div>
         </div>
     </script>
 
     <script type="text/x-template" id="about-template">
-        <div>This is the about page</div>
+        <div>
+            This is the about page
+        </div>
+    </script>
+
+    <script type="text/x-template" id="weather-template">
+        <div>
+            <p>
+                Weather Vue
+            </p>
+            <input v-model="currentLocation" v-on:keyup.enter="fetchData(currentLocation)" placeholder="Enter Location">
+            <button v-on:click="fetchData(currentLocation)">Get Weather</button>
+            <div v-html="currentWeather ? currentWeather.query.results.channel.item.description : null"></div>
+        </div>
     </script>
 
     <script src="https://unpkg.com/vue@2.0.0-rc.8/dist/vue.js"></script>
