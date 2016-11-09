@@ -1,0 +1,55 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px;
+    background: #efefef;
+    /* bottom = footer height */
+}
+
+nav {
+    background: #2d3e50;
+}
+
+nav .pure-menu-link {
+    color: #6fbef3;
+}
+
+nav .pure-menu-heading {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav .pure-menu-selected .pure-menu-link,
+.pure-menu-selected .pure-menu-link:visited {
+    color: white;
+}
+
+.pure-menu-active>.pure-menu-link,
+.pure-menu-link:hover,
+.pure-menu-link:focus {
+    background-color: transparent;
+}
+
+.container {
+    margin: 50px auto 20px auto;
+    width: 90%;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: #2d3e50;
+    color: white;
+}
+
+.inner-footer {
+    margin-top: 20px;
+    padding: 0.5em 1em;
+}
