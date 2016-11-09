@@ -35,7 +35,6 @@
             <router-link class="pure-menu-heading" to="/">Site Title</router-link>
             <ul class="pure-menu-list">
                 <li v-for="route in routes" v-bind:class="router.currentRoute.path === route.path ? 'pure-menu-item pure-menu-selected' : 'pure-menu-item'">
-                    <!--<li v-for="route in routes" v-bind:class="'pure-menu-item ' + location.hash">-->
                     <router-link class="pure-menu-link" v-bind:to="route.path">{{ route.linkTitle }}</router-link>
                 </li>
             </ul>
